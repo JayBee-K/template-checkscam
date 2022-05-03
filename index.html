@@ -31,19 +31,20 @@
     <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="is-navigation">
+<body>
 <header class="header bg-white position-relative z-index-10" id="header">
     <div class="header-main">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-3">
+                <div class="col-lg-3">
                     <div class="header-bar d-flex align-items-center">
-                        <div class="header-hamburger d--block d-lg-none">
+                        <div class="header-hamburger d-block d-lg-none">
                             <button type="button" class="no-animation" id="header-hamburger">
                                 <span></span>
                                 <span></span>
@@ -55,11 +56,47 @@
                                 <img src="./assets/images/logo.svg" alt="">
                             </a>
                         </div>
+                        <div class="header-button d-lg-none ml-auto d-flex align-items-center justify-content-end">
+                            <div class="header-button_items position-relative">
+                                <button type="button"
+                                        class="btn-theme btn-theme_gray btn-collapse_search btn-call_search">
+                                    <i class="far fa-search"></i>
+                                </button>
+                                <div class="header-search">
+                                    <form action="">
+                                        <div class="form-group position-relative">
+                                            <input type="text" class="form-control"
+                                                   placeholder="Nhập số điện thoại, số tài khoản ngân hàng ...">
+                                            <button type="submit">
+                                                <i class="far fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-button_items position-relative">
+                                <a href="" role="button" class="btn-theme btn-theme_primary">
+                                    <div class="d-block d-sm-none">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                    <div class="d-sm-block d-none">
+                                        Tố cáo lừa đảo
+                                    </div>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="header-navigation d-flex align-items-center justify-content-end">
+                <div class="col-lg-6">
+                    <div id="header-navigation" class="header-navigation d-lg-flex align-items-center justify-content-end">
                         <ul>
+                            <li class="d-block d-lg-none header-navigation_logo">
+                                <a href="">
+                                    <img src="./assets/images/logo.svg" alt="">
+                                </a>
+                                <button type="button" class="header-navigation_close" id="header-navigation_close"><i class="far fa-times"></i></button>
+                            </li>
                             <li>
                                 <a href="">
                                     TRANG CHỦ
@@ -71,7 +108,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="jasvascript:void(0)">
                                     DỊCH VỤ <i class="far fa-angle-down"></i>
                                 </a>
                                 <ul>
@@ -105,11 +142,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="header-button d-flex align-items-center justify-content-end">
+                <div class="col-lg-3">
+                    <div class="header-button d-none d-lg-flex align-items-center justify-content-end">
                         <div class="header-button_items position-relative">
-                            <button type="button" class="btn-theme btn-theme_gray btn-collapse_search"
-                                    id="btn-collapse_search">
+                            <button type="button" class="btn-theme btn-theme_gray btn-collapse_search btn-call_search">
                                 <i class="far fa-search"></i>
                             </button>
                             <div class="header-search">
@@ -160,7 +196,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <form action="">
                                 <div class="form-group position-relative">
                                     <input type="text" class="form-control"
@@ -179,7 +215,7 @@
                                 </a>
                             </form>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="intro-image">
                                 <img src="./assets/images/bg-scam.png" class="w-100 img-fluid h-auto" alt="">
                             </div>
@@ -193,7 +229,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -205,6 +241,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -213,7 +253,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -225,6 +265,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -233,7 +277,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -245,6 +289,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -253,7 +301,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -265,6 +313,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -273,7 +325,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -285,6 +337,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -293,7 +349,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -305,6 +361,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -313,7 +373,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -325,6 +385,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -333,7 +397,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -345,6 +409,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -353,7 +421,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -365,6 +433,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -373,7 +445,7 @@
                                 <span class="scam-title_icon">
                                     <i class="fas fa-user"></i>
                                 </span>
-                                <a href="" class="scam-title_link">
+                                <a href="scammer.html" class="scam-title_link">
                                     Lê Vinh Quang
                                 </a>
                             </div>
@@ -385,6 +457,10 @@
                                 <span class="scam-info_phone">
                                     <i class="fas fa-phone-alt"></i>
                                     0909.909.909
+                                </span>
+                                <span class="scam-info_eye">
+                                    <i class="fas fa-eye"></i>
+                                    199 lượt xem
                                 </span>
                             </div>
                         </div>
@@ -469,7 +545,7 @@
                                     <i class="fas fa-shield-check"></i>
                                 </div>
                                 <div class="service-content">
-                                    <a href="check-quy-bao-hiem" class="service-content_title">
+                                    <a href="check-quy-bao-hiem.html" class="service-content_title">
                                         Check quỹ bảo hiểm
                                     </a>
                                     <div class="service-content_desc">
@@ -478,7 +554,7 @@
                                     </div>
                                 </div>
                                 <div class="service-action">
-                                    <a href="check-quy-bao-hiem" class="btn-theme btn-theme_white">
+                                    <a href="check-quy-bao-hiem.html" class="btn-theme btn-theme_white">
                                         Check quỹ
                                         <span></span>
                                     </a>
@@ -532,7 +608,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row row-col-10">
-                        <div class="col col-sm-6 col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3">
                             <a href="#"
                                class="article-card card">
                                 <div class="card-header">
@@ -559,7 +635,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col-sm-6 col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3">
                             <a href="#"
                                class="article-card card">
                                 <div class="card-header">
@@ -586,7 +662,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col-sm-6 col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3">
                             <a href="#"
                                class="article-card card">
                                 <div class="card-header">
@@ -613,7 +689,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col col-sm-6 col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3">
                             <a href="#"
                                class="article-card card">
                                 <div class="card-header">
@@ -779,6 +855,7 @@
         src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript"
         src="./assets/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>
