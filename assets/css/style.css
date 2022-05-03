@@ -2337,6 +2337,10 @@
     .section-shield .shield-inner .shield-list .shield-item {
         width: calc(100% / 4);
     }
+
+    .service-card {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (max-width: 525px) {
