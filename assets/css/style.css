@@ -1462,7 +1462,8 @@
     opacity: .9;
 }
 
-.form-theme .form-theme_item .form-theme_item__input {
+.form-theme .form-theme_item .form-theme_item__input,
+.form-theme .form-theme_item .form-theme_item__select {
     border: 1px #d9d9d9 solid !important;
     background-clip: padding-box;
     border-radius: 5px;
@@ -1482,8 +1483,40 @@
     appearance: none;
 }
 
+.form-theme .form-theme_item .form-theme_item__select {
+    padding-right: 2.7714285714em;
+    white-space: nowrap;
+}
+
+.form-theme .form-theme_item .form-theme_item__caret {
+    display: block;
+    width: 2.6428571429em;
+    height: 43%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    border-left: 1px rgba(179, 179, 179, 0.5) solid;
+}
+
+.form-theme .form-theme_item .form-theme_item__caret i {
+    color: #919191;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: .8;
+    font-size: 1.3em;
+}
+
 .form-theme .form-theme_item.valid .form-theme_item__label,
-.form-theme .form-theme_item:focus-within .form-theme_item__label {
+.form-theme .form-theme_item:focus-within .form-theme_item__label,
+.form-theme .form-theme_item .form-theme_item__select +  .form-theme_item__label{
     -webkit-transform: translateY(21px);
     transform: translateY(2px);
     font-size: .9em;
