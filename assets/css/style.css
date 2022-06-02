@@ -1516,7 +1516,7 @@
 
 .form-theme .form-theme_item.valid .form-theme_item__label,
 .form-theme .form-theme_item:focus-within .form-theme_item__label,
-.form-theme .form-theme_item .form-theme_item__select +  .form-theme_item__label{
+.form-theme .form-theme_item .form-theme_item__select + .form-theme_item__label {
     -webkit-transform: translateY(21px);
     transform: translateY(2px);
     font-size: .9em;
@@ -2427,4 +2427,118 @@
         align-items: center;
         justify-content: space-between;
     }
+}
+
+.btn-checkmess {
+    margin-right: 15px;
+    position: relative;
+}
+
+.btn-checkmess .btn-theme {
+    position: relative;
+    z-index: 100;
+}
+
+.btn-checkmess:before {
+    content: '';
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border: 2px dashed orange;
+    border-radius: 4px;
+    position: absolute;
+    display: block;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.btn-checkmess > .description-hidden {
+    position: absolute;
+    width: 200px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #fff;
+    padding: 10px;
+    cursor: auto;
+    display: block;
+    color: #111;
+    text-align: left;
+    margin-bottom: 0;
+    top: 100%;
+    right: 50%;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.btn-checkmess > .description-hidden:before {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 8px;
+}
+
+.btn-checkmess > .description-hidden > span {
+    display: block;
+}
+
+.btn-checkmess > .description-hidden > button {
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 4px 8px;
+    font-size: .9em;
+    border: 0;
+    overflow: hidden;
+    z-index: 1;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: none;
+    float: right;
+}
+
+.btn-checkmess > .description-hidden > button:hover {
+    background: var(--primary-hover);
+}
+
+.description-overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #111;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 991px) {
+    .btn-checkmess > .description-hidden {
+        right: unset;
+        left: calc(50% - 10px);
+    }
+
+    .btn-checkmess > .description-hidden:before {
+        right: unset;
+        left: 8px;
+    }
+
+}
+
+.btn-checkmess.btn-checkmess_hidden:before,
+.btn-checkmess.btn-checkmess_hidden .description-hidden,
+.btn-checkmess.btn-checkmess_hidden .description-overlay{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
